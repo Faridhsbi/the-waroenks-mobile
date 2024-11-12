@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_waroenks/menu.dart';
+import 'package:the_waroenks/screens/menu.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -31,8 +31,11 @@ class MyApp extends StatelessWidget {
       colorScheme: ColorScheme.fromSwatch(
             primarySwatch: Colors.lightBlue,
       ).copyWith(secondary: Colors.lightBlue[600]),
+
+      scaffoldBackgroundColor: Colors.lightBlue[100], // Set background color
       ),
       home: MyHomePage(),
+      debugShowCheckedModeBanner: false
     );
   }
 }

@@ -25,28 +25,57 @@ Sedangkan Row adalah widget layout yang mengatur child widget-nya secara horizon
 Contoh implementasi `Column` :
 
 ```dart
-Column(
-  children: [
-    Text('Baris 1'),
-    Text('Baris 2'),
-    Text('Baris 3'),
-  ],
-)
+child: const Column(
+              children: [
+                Text(
+                  'The Waroenks',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                Padding(padding: EdgeInsets.all(8)),
+                Text(
+                  "Makanan dan Minuman Murah Berkualitas hanya disini!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
 ```
 
 Contoh implementasi `Row` :
 ```dart
-Row(
-  children: [
-    Text('Kolom 1'),
-    Text('Kolom 2'),
-    Text('Kolom 3'),
-  ],
-)
+child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                item.icon,
+                color: Colors.white,
+                size: 30.0,
+              ),
+              const SizedBox(width: 10), // Space between icon and text
+              Text(
+                item.name,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 18, //  font size
+                  fontWeight: FontWeight.bold, // Bold text
+                ),
+              ),
+            ],
+          ),
 ```
 
 
-### Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
+### 3. Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
 
 Pada project kali ini, saya menggunakan TextFormField pada Input untuk product, amount, dan description karena cocok digunakan untuk teks dan angka 
 
@@ -58,7 +87,7 @@ Elemen Input Flutter Lain yang Tidak Digunakan:
 * Switch Input : Untuk memilih toggle on/off
 * Date/time picker input : Untuk input tanggal dan waktu
 
-### Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
+### 4. Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
 
 * Definisikan theme pada `main.app`
 ```dart
@@ -73,7 +102,7 @@ theme: ThemeData(
 backgroundColor: Theme.of(context).colorScheme.primary,
 ```
 
-### Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
+### 5. Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
 Dengan menggunakan `Navigator.push()` untuk menambahkan halaman baru ke stack. Dan melakukan routing agar dapat menuju ke halaman yang ingin dituju.
 
 ```dart

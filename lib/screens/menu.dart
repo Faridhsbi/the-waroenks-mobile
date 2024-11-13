@@ -6,9 +6,9 @@ class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
 
   final List<ItemHomepage> items = [
-    ItemHomepage("Lihat Daftar Produk", Icons.list, Colors.lightGreen.shade700),
-    ItemHomepage("Tambah Item", Icons.add_circle_outline, Colors.blue.shade800),
-    ItemHomepage("Logout", Icons.logout, Colors.orange.shade700),
+    ItemHomepage("Lihat Daftar Produk", Icons.list, const Color.fromARGB(255, 0, 140, 255)),
+    ItemHomepage("Tambah Item", Icons.add_circle_outline, const Color.fromARGB(255, 66, 208, 255)),
+    ItemHomepage("Logout", Icons.logout, const Color.fromARGB(255, 255, 0, 0)),
   ];
 
   @override

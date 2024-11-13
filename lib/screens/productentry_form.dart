@@ -19,7 +19,7 @@ class _ProductEntryFormPageState extends State<ProductEntryFormPage> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'Tambah Productmu Disini',
+            'Tambah Produkmu Disini',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 20,

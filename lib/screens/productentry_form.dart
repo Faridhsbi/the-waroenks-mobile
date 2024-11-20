@@ -168,14 +168,12 @@ class _ProductEntryFormPageState extends State<ProductEntryFormPage> {
                     onPressed: () async {
                         if (_formKey.currentState!.validate()) {
                             // Kirim ke Django dan tunggu respons
-                            // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
                             final response = await request.postJson(
                                 "http://localhost:8000/create-flutter/",
                                 jsonEncode(<String, String>{
                                     'productName': _product,
                                     'description': _description,
                                     'stock': _amount.toString(),
-                                // TODO: Sesuaikan field data sesuai dengan aplikasimu
                                 }),
                             );
                             if (context.mounted) {

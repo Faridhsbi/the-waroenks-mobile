@@ -14,14 +14,14 @@ class LoginApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(Theme.of(context).colorScheme.primary); // Debug warna primary
     return MaterialApp(
       title: 'Login',
       theme: ThemeData(
         useMaterial3: true,
-        appBarTheme: AppBarTheme(
-          backgroundColor: Theme.of(context).colorScheme.primary,
-          foregroundColor: Colors.white,
-        ),
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.lightBlue,
+        ).copyWith(secondary: Colors.lightBlue[300]),
       ),
       home: const LoginPage(),
     );
@@ -46,6 +46,8 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        foregroundColor: Colors.white,
       ),
       body: Center(
         child: SingleChildScrollView(
